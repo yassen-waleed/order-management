@@ -1,0 +1,2466 @@
+{
+	"info": {
+		"_postman_id": "33af06d8-7aa8-465f-8b4e-a49c5718b5a0",
+		"name": "Assignment_2(product Managment)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17259823"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"yasen@gmail.com\",\r\n    \"password\":\"yassen2000\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/auth",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"auth"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"user@gmail.com\",\r\n    \"password\":\"yassen2000\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8082/api/v1/auth",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"v1",
+								"auth"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 07 Jun 2022 16:55:47 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"jwt\": \"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyQGdtYWlsLmNvbSIsImV4cCI6MTY1NDY1Njk0NywiaWF0IjoxNjU0NjIwOTQ3fQ.1E8RIKx3F6BfPuZMMwp3zMJRsxiaOJoPutfztXj8Yfk\",\n    \"expirationTime\": \"2022-06-08T02:55:47.000+00:00\",\n    \"email\": \"user@gmail.com\",\n    \"authorities\": null\n}"
+				}
+			]
+		},
+		{
+			"name": "getCustomers",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "secret eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ5YXNlbkBnbWFpbC5jb20iLCJleHAiOjE2NTQ1MDk2NjAsImlhdCI6MTY1NDQ3MzY2MH0.JwEjDPnuUrJ2sgBf-f_owD57Fdl0Ky4WW79tTGa4_c4",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/api/customers",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"customers"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "getCustomers",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "secret eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyQGdtYWlsLmNvbSIsImV4cCI6MTY1NDY1Njk0NywiaWF0IjoxNjU0NjIwOTQ3fQ.1E8RIKx3F6BfPuZMMwp3zMJRsxiaOJoPutfztXj8Yfk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8082/api/customers",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"customers"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 07 Jun 2022 17:09:27 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"customer_id\": 1,\n        \"first_name\": \"user\",\n        \"last_name\": \"user\",\n        \"bornAt\": \"2020-02-02\",\n        \"email\": \"user@gmail.com\",\n        \"password\": \"$2a$10$CzTLi5x0tchDsCFQH8Ly/uQojQEYF4q5ItQJUjFDpWkmvWH1P0une\",\n        \"locked\": false,\n        \"enabled\": false,\n        \"accountNonLocked\": true,\n        \"accountNonExpired\": true,\n        \"credentialsNonExpired\": true,\n        \"authorities\": null,\n        \"username\": \"user@gmail.com\"\n    },\n    {\n        \"customer_id\": 2,\n        \"first_name\": \"yaseen\",\n        \"last_name\": \"waleed\",\n        \"bornAt\": \"2000-08-15\",\n        \"email\": \"yasennnnnnn@gmail.com\",\n        \"password\": \"$2a$10$qBMsjMTstxZV1MH93rYv1eYXx/jjaBYun1TJwTpw0IcNoGYXKoq46\",\n        \"locked\": false,\n        \"enabled\": false,\n        \"accountNonLocked\": true,\n        \"accountNonExpired\": true,\n        \"credentialsNonExpired\": true,\n        \"authorities\": null,\n        \"username\": \"yasennnnnnn@gmail.com\"\n    },\n    {\n        \"customer_id\": 6,\n        \"first_name\": \"yaseen\",\n        \"last_name\": \"walid\",\n        \"bornAt\": \"2017-08-25\",\n        \"email\": \"NEWwwemail@gmail.com\",\n        \"password\": \"$2a$10$dzsWYhnZirKSG109DSYMUuqX.udhYTF5lP/lgbRSGKLDzNoR0EdZe\",\n        \"locked\": false,\n        \"enabled\": false,\n        \"accountNonLocked\": true,\n        \"accountNonExpired\": true,\n        \"credentialsNonExpired\": true,\n        \"authorities\": null,\n        \"username\": \"NEWwwemail@gmail.com\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "add customer",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "secret eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ5YXNlbkBnbWFpbC5jb20iLCJleHAiOjE2NTQ1MDk2NjAsImlhdCI6MTY1NDQ3MzY2MH0.JwEjDPnuUrJ2sgBf-f_owD57Fdl0Ky4WW79tTGa4_c4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \r\n        \"first_name\": \"yaseen\",\r\n        \"last_name\": \"walid\",\r\n        \"bornAt\": \"2000-08-15\",\r\n        \"email\": \"NEWemail@gmail.com\",\r\n        \"password\": \"yassen2000\"\r\n    \r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/customers",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"customers"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "add customer",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "secret eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyQGdtYWlsLmNvbSIsImV4cCI6MTY1NDY1Njk0NywiaWF0IjoxNjU0NjIwOTQ3fQ.1E8RIKx3F6BfPuZMMwp3zMJRsxiaOJoPutfztXj8Yfk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \r\n        \"first_name\": \"yaseen\",\r\n        \"last_name\": \"walid\",\r\n        \"bornAt\": \"2017-08-25\",\r\n        \"email\": \"NEWwwemail@gmail.com\",\r\n        \"password\": \"yassen2000\"\r\n    \r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8082/api/customers",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"customers"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 07 Jun 2022 17:03:04 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"customer_id\": 6,\n    \"first_name\": \"yaseen\",\n    \"last_name\": \"walid\",\n    \"bornAt\": \"2017-08-25T00:00:00.000+00:00\",\n    \"email\": \"NEWwwemail@gmail.com\",\n    \"password\": \"$2a$10$dzsWYhnZirKSG109DSYMUuqX.udhYTF5lP/lgbRSGKLDzNoR0EdZe\"\n}"
+				}
+			]
+		},
+		{
+			"name": "update customer",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "secret eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ5YXNlbkBnbWFpbC5jb20iLCJleHAiOjE2NTQ1MDk2NjAsImlhdCI6MTY1NDQ3MzY2MH0.JwEjDPnuUrJ2sgBf-f_owD57Fdl0Ky4WW79tTGa4_c4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \r\n        \"first_name\": \"yaseen\",\r\n        \"last_name\": \"waleed\",\r\n        \"bornAt\": \"2000-08-15\",\r\n        \"email\": \"yasennnn@gmail.com\",\r\n        \"password\": \"yassen2000\"\r\n    \r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/customers/21",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"customers",
+						"21"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "update customer",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "secret eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyQGdtYWlsLmNvbSIsImV4cCI6MTY1NDY1Njk0NywiaWF0IjoxNjU0NjIwOTQ3fQ.1E8RIKx3F6BfPuZMMwp3zMJRsxiaOJoPutfztXj8Yfk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \r\n        \"first_name\": \"yaseen\",\r\n        \"last_name\": \"waleed\",\r\n        \"bornAt\": \"2000-08-15\",\r\n        \"email\": \"yasennnnnnn@gmail.com\",\r\n        \"password\": \"yassen2000\"\r\n    \r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8082/api/customers/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"customers",
+								"2"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 07 Jun 2022 17:04:02 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"customer_id\": 2,\n    \"first_name\": \"yaseen\",\n    \"last_name\": \"waleed\",\n    \"bornAt\": \"2000-08-15T00:00:00.000+00:00\",\n    \"email\": \"yasennnnnnn@gmail.com\",\n    \"password\": \"$2a$10$qBMsjMTstxZV1MH93rYv1eYXx/jjaBYun1TJwTpw0IcNoGYXKoq46\"\n}"
+				}
+			]
+		},
+		{
+			"name": "delete customer",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "secret eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ5YXNlbkBnbWFpbC5jb20iLCJleHAiOjE2NTQ1MDk2NjAsImlhdCI6MTY1NDQ3MzY2MH0.JwEjDPnuUrJ2sgBf-f_owD57Fdl0Ky4WW79tTGa4_c4",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/api/customers/21",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"customers",
+						"21"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "delete customer",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "secret eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyQGdtYWlsLmNvbSIsImV4cCI6MTY1NDY1Njk0NywiaWF0IjoxNjU0NjIwOTQ3fQ.1E8RIKx3F6BfPuZMMwp3zMJRsxiaOJoPutfztXj8Yfk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8082/api/customers/6",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"customers",
+								"6"
+							]
+						}
+					},
+					"status": "Accepted",
+					"code": 202,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "39"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 07 Jun 2022 17:24:44 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "Customer has been Deleted successfully."
+				}
+			]
+		},
+		{
+			"name": "add product",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "secret eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ5YXNlbkBnbWFpbC5jb20iLCJleHAiOjE2NTQ1MDc4NzksImlhdCI6MTY1NDQ3MTg3OX0.WhEqrfdVu9-2haYwWd7_modyUAE4-LpERCg9eFmA-KE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \r\n        \"name\": \"laptob\",\r\n        \"price\": 500.0,\r\n        \"slug\": \"22\",\r\n        \"reference\": \"dd\",\r\n        \"vat\": 2\r\n        \r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/products",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "add product",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "secret eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyQGdtYWlsLmNvbSIsImV4cCI6MTY1NDY1Njk0NywiaWF0IjoxNjU0NjIwOTQ3fQ.1E8RIKx3F6BfPuZMMwp3zMJRsxiaOJoPutfztXj8Yfk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \r\n        \"name\": \"laptob\",\r\n        \"price\": 500.0,\r\n        \"slug\": \"22\",\r\n        \"reference\": \"dd\",\r\n        \"vat\": 2\r\n        \r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8082/api/products",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 07 Jun 2022 17:05:34 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"product_id\": 4,\n    \"name\": \"laptob\",\n    \"price\": 500,\n    \"slug\": \"22\",\n    \"reference\": \"dd\",\n    \"vat\": 2\n}"
+				}
+			]
+		},
+		{
+			"name": "all product",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "secret eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ5YXNlbkBnbWFpbC5jb20iLCJleHAiOjE2NTQ1MDk2NjAsImlhdCI6MTY1NDQ3MzY2MH0.JwEjDPnuUrJ2sgBf-f_owD57Fdl0Ky4WW79tTGa4_c4",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/api/products",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "all product",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "secret eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyQGdtYWlsLmNvbSIsImV4cCI6MTY1NDY1Njk0NywiaWF0IjoxNjU0NjIwOTQ3fQ.1E8RIKx3F6BfPuZMMwp3zMJRsxiaOJoPutfztXj8Yfk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8082/api/products",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 07 Jun 2022 17:14:30 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"product_id\": 1,\n        \"slug\": \"22\",\n        \"reference\": \"dd\",\n        \"vat\": 2,\n        \"name\": \"laptob\",\n        \"price\": 500\n    },\n    {\n        \"product_id\": 2,\n        \"slug\": \"222222\",\n        \"reference\": \"dd\",\n        \"vat\": 2,\n        \"name\": \"laptob\",\n        \"price\": 5050500\n    },\n    {\n        \"product_id\": 3,\n        \"slug\": \"22\",\n        \"reference\": \"dd\",\n        \"vat\": 2,\n        \"name\": \"laptob\",\n        \"price\": 500\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "update product",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "secret eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ5YXNlbkBnbWFpbC5jb20iLCJleHAiOjE2NTQ1MDk2NjAsImlhdCI6MTY1NDQ3MzY2MH0.JwEjDPnuUrJ2sgBf-f_owD57Fdl0Ky4WW79tTGa4_c4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {       \r\n\r\n    \"name\": \"laptob\",\r\n    \"price\": 500.0,\r\n    \"slug\": \"222222\",\r\n    \"reference\": \"dd\",\r\n    \"vat\": 2\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/products/5",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"products",
+						"5"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "update product",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "secret eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyQGdtYWlsLmNvbSIsImV4cCI6MTY1NDY1Njk0NywiaWF0IjoxNjU0NjIwOTQ3fQ.1E8RIKx3F6BfPuZMMwp3zMJRsxiaOJoPutfztXj8Yfk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {       \r\n\r\n    \"name\": \"laptob\",\r\n    \"price\": 5050500.0,\r\n    \"slug\": \"222222\",\r\n    \"reference\": \"dd\",\r\n    \"vat\": 2\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8082/api/products/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"products",
+								"2"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 07 Jun 2022 17:06:27 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"product_id\": 2,\n    \"name\": \"laptob\",\n    \"price\": 5050500,\n    \"slug\": \"222222\",\n    \"reference\": \"dd\",\n    \"vat\": 2\n}"
+				}
+			]
+		},
+		{
+			"name": "delete product",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "secret eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ5YXNlbkBnbWFpbC5jb20iLCJleHAiOjE2NTQ1MDc4NzksImlhdCI6MTY1NDQ3MTg3OX0.WhEqrfdVu9-2haYwWd7_modyUAE4-LpERCg9eFmA-KE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/api/products/5",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"products",
+						"5"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "delete product",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "secret eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyQGdtYWlsLmNvbSIsImV4cCI6MTY1NDY1Njk0NywiaWF0IjoxNjU0NjIwOTQ3fQ.1E8RIKx3F6BfPuZMMwp3zMJRsxiaOJoPutfztXj8Yfk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8082/api/products/4",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"products",
+								"4"
+							]
+						}
+					},
+					"status": "Accepted",
+					"code": 202,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "38"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 07 Jun 2022 17:07:12 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "product has been Deleted successfully."
+				}
+			]
+		},
+		{
+			"name": "all order",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "secret eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ5YXNlbkBnbWFpbC5jb20iLCJleHAiOjE2NTQ1MDk2NjAsImlhdCI6MTY1NDQ3MzY2MH0.JwEjDPnuUrJ2sgBf-f_owD57Fdl0Ky4WW79tTGa4_c4",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/api/orders",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"orders"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "all order",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "secret eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyQGdtYWlsLmNvbSIsImV4cCI6MTY1NDY1Njk0NywiaWF0IjoxNjU0NjIwOTQ3fQ.1E8RIKx3F6BfPuZMMwp3zMJRsxiaOJoPutfztXj8Yfk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8082/api/orders",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"orders"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 07 Jun 2022 17:25:46 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"order_id\": 10,\n        \"customer\": {\n            \"customer_id\": 1,\n            \"first_name\": \"user\",\n            \"last_name\": \"user\",\n            \"bornAt\": \"2020-02-02\",\n            \"email\": \"user@gmail.com\",\n            \"password\": \"$2a$10$CzTLi5x0tchDsCFQH8Ly/uQojQEYF4q5ItQJUjFDpWkmvWH1P0une\",\n            \"locked\": false,\n            \"enabled\": false,\n            \"accountNonLocked\": true,\n            \"accountNonExpired\": true,\n            \"credentialsNonExpired\": true,\n            \"authorities\": null,\n            \"username\": \"user@gmail.com\"\n        },\n        \"orderAt\": \"2022-06-07T17:14:41.471+00:00\"\n    },\n    {\n        \"order_id\": 11,\n        \"customer\": {\n            \"customer_id\": 1,\n            \"first_name\": \"user\",\n            \"last_name\": \"user\",\n            \"bornAt\": \"2020-02-02\",\n            \"email\": \"user@gmail.com\",\n            \"password\": \"$2a$10$CzTLi5x0tchDsCFQH8Ly/uQojQEYF4q5ItQJUjFDpWkmvWH1P0une\",\n            \"locked\": false,\n            \"enabled\": false,\n            \"accountNonLocked\": true,\n            \"accountNonExpired\": true,\n            \"credentialsNonExpired\": true,\n            \"authorities\": null,\n            \"username\": \"user@gmail.com\"\n        },\n        \"orderAt\": \"2022-06-07T17:14:42.529+00:00\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "add order",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "secret eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ5YXNlbkBnbWFpbC5jb20iLCJleHAiOjE2NTQ1MDk2NjAsImlhdCI6MTY1NDQ3MzY2MH0.JwEjDPnuUrJ2sgBf-f_owD57Fdl0Ky4WW79tTGa4_c4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "   {\r\n    \r\n        \"customer_id\": 1\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8082/api/orders",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"orders"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "add order",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "secret eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyQGdtYWlsLmNvbSIsImV4cCI6MTY1NDY1Njk0NywiaWF0IjoxNjU0NjIwOTQ3fQ.1E8RIKx3F6BfPuZMMwp3zMJRsxiaOJoPutfztXj8Yfk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "   {\r\n    \r\n        \"customer_id\": 1\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8082/api/orders",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"orders"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 07 Jun 2022 17:14:42 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"order_id\": 11,\n    \"customer_id\": 1,\n    \"orderAt\": \"2022-06-07T17:14:42.529+00:00\"\n}"
+				}
+			]
+		},
+		{
+			"name": "update order",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "secret eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ5YXNlbkBnbWFpbC5jb20iLCJleHAiOjE2NTQ1MDc4NzksImlhdCI6MTY1NDQ3MTg3OX0.WhEqrfdVu9-2haYwWd7_modyUAE4-LpERCg9eFmA-KE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \r\n    \"customer_id\": 18,\r\n    \"orderAt\": \"2022-06-06T00:12:54.673+00:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/orders/24",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"orders",
+						"24"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "update order",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "secret eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyQGdtYWlsLmNvbSIsImV4cCI6MTY1NDY1Njk0NywiaWF0IjoxNjU0NjIwOTQ3fQ.1E8RIKx3F6BfPuZMMwp3zMJRsxiaOJoPutfztXj8Yfk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \r\n        \r\n    \r\n            \"customer_id\": 2,\r\n \r\n        \"orderAt\": \"2022-06-07T17:07:42.115+00:00\"\r\n    \r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8082/api/orders/7",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"orders",
+								"7"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 07 Jun 2022 17:11:26 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"order_id\": 7,\n    \"customer_id\": 2,\n    \"orderAt\": \"2022-06-07T17:07:42.115+00:00\"\n}"
+				}
+			]
+		},
+		{
+			"name": "delete order",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "secret eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ5YXNlbkBnbWFpbC5jb20iLCJleHAiOjE2NTQ1MDc4NzksImlhdCI6MTY1NDQ3MTg3OX0.WhEqrfdVu9-2haYwWd7_modyUAE4-LpERCg9eFmA-KE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/api/orders/24",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"orders",
+						"24"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "delete order",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "secret eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyQGdtYWlsLmNvbSIsImV4cCI6MTY1NDY1Njk0NywiaWF0IjoxNjU0NjIwOTQ3fQ.1E8RIKx3F6BfPuZMMwp3zMJRsxiaOJoPutfztXj8Yfk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8082/api/orders/7",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"orders",
+								"7"
+							]
+						}
+					},
+					"status": "Accepted",
+					"code": 202,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "36"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 07 Jun 2022 17:12:18 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "order has been Deleted successfully."
+				}
+			]
+		},
+		{
+			"name": "all stocks",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "secret eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ5YXNlbkBnbWFpbC5jb20iLCJleHAiOjE2NTQ1MDc4NzksImlhdCI6MTY1NDQ3MTg3OX0.WhEqrfdVu9-2haYwWd7_modyUAE4-LpERCg9eFmA-KE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/api/stocks",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"stocks"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "all stocks",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "secret eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyQGdtYWlsLmNvbSIsImV4cCI6MTY1NDY1Njk0NywiaWF0IjoxNjU0NjIwOTQ3fQ.1E8RIKx3F6BfPuZMMwp3zMJRsxiaOJoPutfztXj8Yfk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8082/api/stocks",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"stocks"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 07 Jun 2022 17:12:36 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[]"
+				}
+			]
+		},
+		{
+			"name": "add stock",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "secret eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ5YXNlbkBnbWFpbC5jb20iLCJleHAiOjE2NTQ1MDc4NzksImlhdCI6MTY1NDQ3MTg3OX0.WhEqrfdVu9-2haYwWd7_modyUAE4-LpERCg9eFmA-KE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"product_id\":6,\r\n    \"quantity\":\"7447\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/stocks",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"stocks"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "add stock",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "secret eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyQGdtYWlsLmNvbSIsImV4cCI6MTY1NDY1Njk0NywiaWF0IjoxNjU0NjIwOTQ3fQ.1E8RIKx3F6BfPuZMMwp3zMJRsxiaOJoPutfztXj8Yfk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"product_id\":1,\r\n    \"quantity\":\"7447\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8082/api/stocks",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"stocks"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 07 Jun 2022 17:13:01 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"stock_id\": 9,\n    \"product_id\": 1,\n    \"quantity\": 7447,\n    \"updateAt\": \"2022-06-07T17:13:01.352+00:00\"\n}"
+				}
+			]
+		},
+		{
+			"name": "update stocks",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "secret eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyQGdtYWlsLmNvbSIsImV4cCI6MTY1NDY1Njk0NywiaWF0IjoxNjU0NjIwOTQ3fQ.1E8RIKx3F6BfPuZMMwp3zMJRsxiaOJoPutfztXj8Yfk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n   \r\n    \"product_id\": 1,\r\n    \"quantity\": 7447,\r\n    \"updateAt\": \"2022-06-07T17:13:01.352+00:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8082/api/stocks/9",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"stocks",
+						"9"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "update stocks",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "secret eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyQGdtYWlsLmNvbSIsImV4cCI6MTY1NDY1Njk0NywiaWF0IjoxNjU0NjIwOTQ3fQ.1E8RIKx3F6BfPuZMMwp3zMJRsxiaOJoPutfztXj8Yfk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n   \r\n    \"product_id\": 1,\r\n    \"quantity\": 744997,\r\n    \"updateAt\": \"2022-06-07T17:13:01.352+00:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8082/api/stocks/9",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"stocks",
+								"9"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 07 Jun 2022 17:13:47 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"stock_id\": 9,\n    \"product_id\": 1,\n    \"quantity\": 744997,\n    \"updateAt\": \"2022-06-07T17:13:01.352+00:00\"\n}"
+				}
+			]
+		},
+		{
+			"name": "delete stocks",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "secret eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ5YXNlbkBnbWFpbC5jb20iLCJleHAiOjE2NTQ1MDc4NzksImlhdCI6MTY1NDQ3MTg3OX0.WhEqrfdVu9-2haYwWd7_modyUAE4-LpERCg9eFmA-KE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/api/stocks/15",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"stocks",
+						"15"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "delete stocks",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "secret eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyQGdtYWlsLmNvbSIsImV4cCI6MTY1NDY1Njk0NywiaWF0IjoxNjU0NjIwOTQ3fQ.1E8RIKx3F6BfPuZMMwp3zMJRsxiaOJoPutfztXj8Yfk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8082/api/stocks/9",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"stocks",
+								"9"
+							]
+						}
+					},
+					"status": "Accepted",
+					"code": 202,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "36"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 07 Jun 2022 17:14:22 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "Stock has been Deleted successfully."
+				}
+			]
+		},
+		{
+			"name": "add product order",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "secret eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ5YXNlbkBnbWFpbC5jb20iLCJleHAiOjE2NTQ1MDc4NzksImlhdCI6MTY1NDQ3MTg3OX0.WhEqrfdVu9-2haYwWd7_modyUAE4-LpERCg9eFmA-KE",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"order_id\":23,\r\n    \"product_id\":6,\r\n    \"quantity\": 6,\r\n    \"price\": 30.0 ,\r\n    \"vat\": 3\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/productorder",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"productorder"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "add product order",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "secret eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyQGdtYWlsLmNvbSIsImV4cCI6MTY1NDY1Njk0NywiaWF0IjoxNjU0NjIwOTQ3fQ.1E8RIKx3F6BfPuZMMwp3zMJRsxiaOJoPutfztXj8Yfk",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"order_id\":11,\r\n    \"product_id\":1,\r\n    \"quantity\": 6,\r\n    \"price\": 30.0 ,\r\n    \"vat\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8082/api/productorder",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"productorder"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 07 Jun 2022 17:15:02 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"order_id\": 11,\n    \"product_id\": 1,\n    \"quantity\": 6,\n    \"price\": 30,\n    \"vat\": 3\n}"
+				}
+			]
+		},
+		{
+			"name": "all product order",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "secret eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ5YXNlbkBnbWFpbC5jb20iLCJleHAiOjE2NTQ1MDc4NzksImlhdCI6MTY1NDQ3MTg3OX0.WhEqrfdVu9-2haYwWd7_modyUAE4-LpERCg9eFmA-KE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/api/productorder",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"productorder"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "all product order",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "secret eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyQGdtYWlsLmNvbSIsImV4cCI6MTY1NDY1Njk0NywiaWF0IjoxNjU0NjIwOTQ3fQ.1E8RIKx3F6BfPuZMMwp3zMJRsxiaOJoPutfztXj8Yfk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8082/api/productorder",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"productorder"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 07 Jun 2022 17:15:15 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": {\n            \"order_id\": 11,\n            \"product_id\": 1\n        },\n        \"quantity\": 6,\n        \"price\": 30,\n        \"vat\": 3\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "swagger",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/v2/api-docs",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v2",
+						"api-docs"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "swagger",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8082/v2/api-docs",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"v2",
+								"api-docs"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 07 Jun 2022 17:15:24 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"swagger\": \"2.0\",\n    \"info\": {\n        \"description\": \"Api Documentation\",\n        \"version\": \"1.0\",\n        \"title\": \"Api Documentation\",\n        \"termsOfService\": \"urn:tos\",\n        \"contact\": {},\n        \"license\": {\n            \"name\": \"Apache 2.0\",\n            \"url\": \"http://www.apache.org/licenses/LICENSE-2.0\"\n        }\n    },\n    \"host\": \"localhost:8082\",\n    \"basePath\": \"/\",\n    \"tags\": [\n        {\n            \"name\": \"basic-error-controller\",\n            \"description\": \"Basic Error Controller\"\n        },\n        {\n            \"name\": \"customer-controller\",\n            \"description\": \"Customer Controller\"\n        },\n        {\n            \"name\": \"login-controller\",\n            \"description\": \"Login Controller\"\n        },\n        {\n            \"name\": \"open-api-web-mvc-resource\",\n            \"description\": \"Open Api Web Mvc Resource\"\n        },\n        {\n            \"name\": \"order-controller\",\n            \"description\": \"Order Controller\"\n        },\n        {\n            \"name\": \"product-controller\",\n            \"description\": \"Product Controller\"\n        },\n        {\n            \"name\": \"product-order-controller\",\n            \"description\": \"Product Order Controller\"\n        },\n        {\n            \"name\": \"stock-controller\",\n            \"description\": \"Stock Controller\"\n        },\n        {\n            \"name\": \"swagger-config-resource\",\n            \"description\": \"Swagger Config Resource\"\n        },\n        {\n            \"name\": \"swagger-welcome-web-mvc\",\n            \"description\": \"Swagger Welcome Web Mvc\"\n        }\n    ],\n    \"paths\": {\n        \"/api/customers\": {\n            \"get\": {\n                \"tags\": [\n                    \"customer-controller\"\n                ],\n                \"summary\": \"getAllCustomers\",\n                \"operationId\": \"getAllCustomersUsingGET\",\n                \"produces\": [\n                    \"*/*\"\n                ],\n                \"responses\": {\n                    \"200\": {\n                        \"description\": \"OK\",\n                        \"schema\": {\n                            \"type\": \"array\",\n                            \"items\": {\n                                \"$ref\": \"#/definitions/Customer\"\n                            }\n                        }\n                    },\n                    \"401\": {\n                        \"description\": \"Unauthorized\"\n                    },\n                    \"403\": {\n                        \"description\": \"Forbidden\"\n                    },\n                    \"404\": {\n                        \"description\": \"Not Found\"\n                    }\n                }\n            },\n            \"post\": {\n                \"tags\": [\n                    \"customer-controller\"\n                ],\n                \"summary\": \"createCustomer\",\n                \"operationId\": \"createCustomerUsingPOST\",\n                \"consumes\": [\n                    \"application/json\"\n                ],\n                \"produces\": [\n                    \"*/*\"\n                ],\n                \"parameters\": [\n                    {\n                        \"in\": \"body\",\n                        \"name\": \"CustomerDTO\",\n                        \"description\": \"CustomerDTO\",\n                        \"required\": true,\n                        \"schema\": {\n                            \"$ref\": \"#/definitions/CustomerDTO\"\n                        }\n                    }\n                ],\n                \"responses\": {\n                    \"200\": {\n                        \"description\": \"OK\",\n                        \"schema\": {\n                            \"$ref\": \"#/definitions/CustomerDTO\"\n                        }\n                    },\n                    \"201\": {\n                        \"description\": \"Created\"\n                    },\n                    \"401\": {\n                        \"description\": \"Unauthorized\"\n                    },\n                    \"403\": {\n                        \"description\": \"Forbidden\"\n                    },\n                    \"404\": {\n                        \"description\": \"Not Found\"\n                    }\n                }\n            }\n        },\n        \"/api/customers/{id}\": {\n            \"get\": {\n                \"tags\": [\n                    \"customer-controller\"\n                ],\n                \"summary\": \"getCustomerById\",\n                \"operationId\": \"getCustomerByIdUsingGET\",\n                \"produces\": [\n                    \"*/*\"\n                ],\n                \"parameters\": [\n                    {\n                        \"name\": \"id\",\n                        \"in\": \"path\",\n                        \"description\": \"id\",\n                        \"required\": true,\n                        \"type\": \"integer\",\n                        \"format\": \"int64\"\n                    }\n                ],\n                \"responses\": {\n                    \"200\": {\n                        \"description\": \"OK\",\n                        \"schema\": {\n                            \"$ref\": \"#/definitions/CustomerDTO\"\n                        }\n                    },\n                    \"401\": {\n                        \"description\": \"Unauthorized\"\n                    },\n                    \"403\": {\n                        \"description\": \"Forbidden\"\n                    },\n                    \"404\": {\n                        \"description\": \"Not Found\"\n                    }\n                }\n            },\n            \"put\": {\n                \"tags\": [\n                    \"customer-controller\"\n                ],\n                \"summary\": \"updateCustomer\",\n                \"operationId\": \"updateCustomerUsingPUT\",\n                \"consumes\": [\n                    \"application/json\"\n                ],\n                \"produces\": [\n                    \"*/*\"\n                ],\n                \"parameters\": [\n                    {\n                        \"in\": \"body\",\n                        \"name\": \"CustomerDTO\",\n                        \"description\": \"CustomerDTO\",\n                        \"required\": true,\n                        \"schema\": {\n                            \"$ref\": \"#/definitions/CustomerDTO\"\n                        }\n                    },\n                    {\n                        \"name\": \"id\",\n                        \"in\": \"path\",\n                        \"description\": \"id\",\n                        \"required\": true,\n                        \"type\": \"integer\",\n                        \"format\": \"int64\"\n                    }\n                ],\n                \"responses\": {\n                    \"200\": {\n                        \"description\": \"OK\",\n                        \"schema\": {\n                            \"$ref\": \"#/definitions/CustomerDTO\"\n                        }\n                    },\n                    \"201\": {\n                        \"description\": \"Created\"\n                    },\n                    \"401\": {\n                        \"description\": \"Unauthorized\"\n                    },\n                    \"403\": {\n                        \"description\": \"Forbidden\"\n                    },\n                    \"404\": {\n                        \"description\": \"Not Found\"\n                    }\n                }\n            },\n            \"delete\": {\n                \"tags\": [\n                    \"customer-controller\"\n                ],\n                \"summary\": \"deleteCustomer\",\n                \"operationId\": \"deleteCustomerUsingDELETE\",\n                \"produces\": [\n                    \"*/*\"\n                ],\n                \"parameters\": [\n                    {\n                        \"name\": \"id\",\n                        \"in\": \"path\",\n                        \"description\": \"id\",\n                        \"required\": true,\n                        \"type\": \"integer\",\n                        \"format\": \"int64\"\n                    }\n                ],\n                \"responses\": {\n                    \"200\": {\n                        \"description\": \"OK\",\n                        \"schema\": {\n                            \"type\": \"string\"\n                        }\n                    },\n                    \"204\": {\n                        \"description\": \"No Content\"\n                    },\n                    \"401\": {\n                        \"description\": \"Unauthorized\"\n                    },\n                    \"403\": {\n                        \"description\": \"Forbidden\"\n                    }\n                }\n            }\n        },\n        \"/api/orders\": {\n            \"get\": {\n                \"tags\": [\n                    \"order-controller\"\n                ],\n                \"summary\": \"getAllProducts\",\n                \"operationId\": \"getAllProductsUsingGET\",\n                \"produces\": [\n                    \"*/*\"\n                ],\n                \"responses\": {\n                    \"200\": {\n                        \"description\": \"OK\",\n                        \"schema\": {\n                            \"type\": \"array\",\n                            \"items\": {\n                                \"$ref\": \"#/definitions/Order\"\n                            }\n                        }\n                    },\n                    \"401\": {\n                        \"description\": \"Unauthorized\"\n                    },\n                    \"403\": {\n                        \"description\": \"Forbidden\"\n                    },\n                    \"404\": {\n                        \"description\": \"Not Found\"\n                    }\n                }\n            },\n            \"post\": {\n                \"tags\": [\n                    \"order-controller\"\n                ],\n                \"summary\": \"createOrder\",\n                \"operationId\": \"createOrderUsingPOST\",\n                \"consumes\": [\n                    \"application/json\"\n                ],\n                \"produces\": [\n                    \"*/*\"\n                ],\n                \"parameters\": [\n                    {\n                        \"in\": \"body\",\n                        \"name\": \"orderDTO\",\n                        \"description\": \"orderDTO\",\n                        \"required\": true,\n                        \"schema\": {\n                            \"$ref\": \"#/definitions/OrderDTO\"\n                        }\n                    }\n                ],\n                \"responses\": {\n                    \"200\": {\n                        \"description\": \"OK\",\n                        \"schema\": {\n                            \"$ref\": \"#/definitions/OrderDTO\"\n                        }\n                    },\n                    \"201\": {\n                        \"description\": \"Created\"\n                    },\n                    \"401\": {\n                        \"description\": \"Unauthorized\"\n                    },\n                    \"403\": {\n                        \"description\": \"Forbidden\"\n                    },\n                    \"404\": {\n                        \"description\": \"Not Found\"\n                    }\n                }\n            }\n        },\n        \"/api/orders/{id}\": {\n            \"get\": {\n                \"tags\": [\n                    \"order-controller\"\n                ],\n                \"summary\": \"getOrderById\",\n                \"operationId\": \"getOrderByIdUsingGET\",\n                \"produces\": [\n                    \"*/*\"\n                ],\n                \"parameters\": [\n                    {\n                        \"name\": \"id\",\n                        \"in\": \"path\",\n                        \"description\": \"id\",\n                        \"required\": true,\n                        \"type\": \"integer\",\n                        \"format\": \"int64\"\n                    }\n                ],\n                \"responses\": {\n                    \"200\": {\n                        \"description\": \"OK\",\n                        \"schema\": {\n                            \"$ref\": \"#/definitions/OrderDTO\"\n                        }\n                    },\n                    \"401\": {\n                        \"description\": \"Unauthorized\"\n                    },\n                    \"403\": {\n                        \"description\": \"Forbidden\"\n                    },\n                    \"404\": {\n                        \"description\": \"Not Found\"\n                    }\n                }\n            },\n            \"put\": {\n                \"tags\": [\n                    \"order-controller\"\n                ],\n                \"summary\": \"updateOrder\",\n                \"operationId\": \"updateOrderUsingPUT\",\n                \"consumes\": [\n                    \"application/json\"\n                ],\n                \"produces\": [\n                    \"*/*\"\n                ],\n                \"parameters\": [\n                    {\n                        \"name\": \"id\",\n                        \"in\": \"path\",\n                        \"description\": \"id\",\n                        \"required\": true,\n                        \"type\": \"integer\",\n                        \"format\": \"int64\"\n                    },\n                    {\n                        \"in\": \"body\",\n                        \"name\": \"orderDTO\",\n                        \"description\": \"orderDTO\",\n                        \"required\": true,\n                        \"schema\": {\n                            \"$ref\": \"#/definitions/OrderDTO\"\n                        }\n                    }\n                ],\n                \"responses\": {\n                    \"200\": {\n                        \"description\": \"OK\",\n                        \"schema\": {\n                            \"$ref\": \"#/definitions/OrderDTO\"\n                        }\n                    },\n                    \"201\": {\n                        \"description\": \"Created\"\n                    },\n                    \"401\": {\n                        \"description\": \"Unauthorized\"\n                    },\n                    \"403\": {\n                        \"description\": \"Forbidden\"\n                    },\n                    \"404\": {\n                        \"description\": \"Not Found\"\n                    }\n                }\n            },\n            \"delete\": {\n                \"tags\": [\n                    \"order-controller\"\n                ],\n                \"summary\": \"deleteOrder\",\n                \"operationId\": \"deleteOrderUsingDELETE\",\n                \"produces\": [\n                    \"*/*\"\n                ],\n                \"parameters\": [\n                    {\n                        \"name\": \"id\",\n                        \"in\": \"path\",\n                        \"description\": \"id\",\n                        \"required\": true,\n                        \"type\": \"integer\",\n                        \"format\": \"int64\"\n                    }\n                ],\n                \"responses\": {\n                    \"200\": {\n                        \"description\": \"OK\",\n                        \"schema\": {\n                            \"type\": \"string\"\n                        }\n                    },\n                    \"204\": {\n                        \"description\": \"No Content\"\n                    },\n                    \"401\": {\n                        \"description\": \"Unauthorized\"\n                    },\n                    \"403\": {\n                        \"description\": \"Forbidden\"\n                    }\n                }\n            }\n        },\n        \"/api/productorder\": {\n            \"get\": {\n                \"tags\": [\n                    \"product-order-controller\"\n                ],\n                \"summary\": \"getAllProductOrders\",\n                \"operationId\": \"getAllProductOrdersUsingGET\",\n                \"produces\": [\n                    \"*/*\"\n                ],\n                \"responses\": {\n                    \"200\": {\n                        \"description\": \"OK\",\n                        \"schema\": {\n                            \"type\": \"array\",\n                            \"items\": {\n                                \"$ref\": \"#/definitions/ProductOrder\"\n                            }\n                        }\n                    },\n                    \"401\": {\n                        \"description\": \"Unauthorized\"\n                    },\n                    \"403\": {\n                        \"description\": \"Forbidden\"\n                    },\n                    \"404\": {\n                        \"description\": \"Not Found\"\n                    }\n                }\n            },\n            \"post\": {\n                \"tags\": [\n                    \"product-order-controller\"\n                ],\n                \"summary\": \"createProductOrder\",\n                \"operationId\": \"createProductOrderUsingPOST\",\n                \"consumes\": [\n                    \"application/json\"\n                ],\n                \"produces\": [\n                    \"*/*\"\n                ],\n                \"parameters\": [\n                    {\n                        \"in\": \"body\",\n                        \"name\": \"productOrderDTO\",\n                        \"description\": \"productOrderDTO\",\n                        \"required\": true,\n                        \"schema\": {\n                            \"$ref\": \"#/definitions/productOrderDTO\"\n                        }\n                    }\n                ],\n                \"responses\": {\n                    \"200\": {\n                        \"description\": \"OK\",\n                        \"schema\": {\n                            \"$ref\": \"#/definitions/productOrderDTO\"\n                        }\n                    },\n                    \"201\": {\n                        \"description\": \"Created\"\n                    },\n                    \"401\": {\n                        \"description\": \"Unauthorized\"\n                    },\n                    \"403\": {\n                        \"description\": \"Forbidden\"\n                    },\n                    \"404\": {\n                        \"description\": \"Not Found\"\n                    }\n                }\n            }\n        },\n        \"/api/products\": {\n            \"get\": {\n                \"tags\": [\n                    \"product-controller\"\n                ],\n                \"summary\": \"getAllProducts\",\n                \"operationId\": \"getAllProductsUsingGET_1\",\n                \"produces\": [\n                    \"*/*\"\n                ],\n                \"responses\": {\n                    \"200\": {\n                        \"description\": \"OK\",\n                        \"schema\": {\n                            \"type\": \"array\",\n                            \"items\": {\n                                \"$ref\": \"#/definitions/Product\"\n                            }\n                        }\n                    },\n                    \"401\": {\n                        \"description\": \"Unauthorized\"\n                    },\n                    \"403\": {\n                        \"description\": \"Forbidden\"\n                    },\n                    \"404\": {\n                        \"description\": \"Not Found\"\n                    }\n                }\n            },\n            \"post\": {\n                \"tags\": [\n                    \"product-controller\"\n                ],\n                \"summary\": \"createProduct\",\n                \"operationId\": \"createProductUsingPOST\",\n                \"consumes\": [\n                    \"application/json\"\n                ],\n                \"produces\": [\n                    \"*/*\"\n                ],\n                \"parameters\": [\n                    {\n                        \"in\": \"body\",\n                        \"name\": \"productDTO\",\n                        \"description\": \"productDTO\",\n                        \"required\": true,\n                        \"schema\": {\n                            \"$ref\": \"#/definitions/ProductDTO\"\n                        }\n                    }\n                ],\n                \"responses\": {\n                    \"200\": {\n                        \"description\": \"OK\",\n                        \"schema\": {\n                            \"$ref\": \"#/definitions/ProductDTO\"\n                        }\n                    },\n                    \"201\": {\n                        \"description\": \"Created\"\n                    },\n                    \"401\": {\n                        \"description\": \"Unauthorized\"\n                    },\n                    \"403\": {\n                        \"description\": \"Forbidden\"\n                    },\n                    \"404\": {\n                        \"description\": \"Not Found\"\n                    }\n                }\n            }\n        },\n        \"/api/products/{id}\": {\n            \"get\": {\n                \"tags\": [\n                    \"product-controller\"\n                ],\n                \"summary\": \"getproductById\",\n                \"operationId\": \"getproductByIdUsingGET\",\n                \"produces\": [\n                    \"*/*\"\n                ],\n                \"parameters\": [\n                    {\n                        \"name\": \"id\",\n                        \"in\": \"path\",\n                        \"description\": \"id\",\n                        \"required\": true,\n                        \"type\": \"integer\",\n                        \"format\": \"int64\"\n                    }\n                ],\n                \"responses\": {\n                    \"200\": {\n                        \"description\": \"OK\",\n                        \"schema\": {\n                            \"$ref\": \"#/definitions/ProductDTO\"\n                        }\n                    },\n                    \"401\": {\n                        \"description\": \"Unauthorized\"\n                    },\n                    \"403\": {\n                        \"description\": \"Forbidden\"\n                    },\n                    \"404\": {\n                        \"description\": \"Not Found\"\n                    }\n                }\n            },\n            \"put\": {\n                \"tags\": [\n                    \"product-controller\"\n                ],\n                \"summary\": \"updateProduct\",\n                \"operationId\": \"updateProductUsingPUT\",\n                \"consumes\": [\n                    \"application/json\"\n                ],\n                \"produces\": [\n                    \"*/*\"\n                ],\n                \"parameters\": [\n                    {\n                        \"name\": \"id\",\n                        \"in\": \"path\",\n                        \"description\": \"id\",\n                        \"required\": true,\n                        \"type\": \"integer\",\n                        \"format\": \"int64\"\n                    },\n                    {\n                        \"in\": \"body\",\n                        \"name\": \"productDTO\",\n                        \"description\": \"productDTO\",\n                        \"required\": true,\n                        \"schema\": {\n                            \"$ref\": \"#/definitions/ProductDTO\"\n                        }\n                    }\n                ],\n                \"responses\": {\n                    \"200\": {\n                        \"description\": \"OK\",\n                        \"schema\": {\n                            \"$ref\": \"#/definitions/ProductDTO\"\n                        }\n                    },\n                    \"201\": {\n                        \"description\": \"Created\"\n                    },\n                    \"401\": {\n                        \"description\": \"Unauthorized\"\n                    },\n                    \"403\": {\n                        \"description\": \"Forbidden\"\n                    },\n                    \"404\": {\n                        \"description\": \"Not Found\"\n                    }\n                }\n            },\n            \"delete\": {\n                \"tags\": [\n                    \"product-controller\"\n                ],\n                \"summary\": \"deleteProduct\",\n                \"operationId\": \"deleteProductUsingDELETE\",\n                \"produces\": [\n                    \"*/*\"\n                ],\n                \"parameters\": [\n                    {\n                        \"name\": \"id\",\n                        \"in\": \"path\",\n                        \"description\": \"id\",\n                        \"required\": true,\n                        \"type\": \"integer\",\n                        \"format\": \"int64\"\n                    }\n                ],\n                \"responses\": {\n                    \"200\": {\n                        \"description\": \"OK\",\n                        \"schema\": {\n                            \"type\": \"string\"\n                        }\n                    },\n                    \"204\": {\n                        \"description\": \"No Content\"\n                    },\n                    \"401\": {\n                        \"description\": \"Unauthorized\"\n                    },\n                    \"403\": {\n                        \"description\": \"Forbidden\"\n                    }\n                }\n            }\n        },\n        \"/api/stocks\": {\n            \"get\": {\n                \"tags\": [\n                    \"stock-controller\"\n                ],\n                \"summary\": \"getAllStocks\",\n                \"operationId\": \"getAllStocksUsingGET\",\n                \"produces\": [\n                    \"*/*\"\n                ],\n                \"responses\": {\n                    \"200\": {\n                        \"description\": \"OK\",\n                        \"schema\": {\n                            \"type\": \"array\",\n                            \"items\": {\n                                \"$ref\": \"#/definitions/Stock\"\n                            }\n                        }\n                    },\n                    \"401\": {\n                        \"description\": \"Unauthorized\"\n                    },\n                    \"403\": {\n                        \"description\": \"Forbidden\"\n                    },\n                    \"404\": {\n                        \"description\": \"Not Found\"\n                    }\n                }\n            },\n            \"post\": {\n                \"tags\": [\n                    \"stock-controller\"\n                ],\n                \"summary\": \"createStock\",\n                \"operationId\": \"createStockUsingPOST\",\n                \"consumes\": [\n                    \"application/json\"\n                ],\n                \"produces\": [\n                    \"*/*\"\n                ],\n                \"parameters\": [\n                    {\n                        \"in\": \"body\",\n                        \"name\": \"stockDTO\",\n                        \"description\": \"stockDTO\",\n                        \"required\": true,\n                        \"schema\": {\n                            \"$ref\": \"#/definitions/StockDTO\"\n                        }\n                    }\n                ],\n                \"responses\": {\n                    \"200\": {\n                        \"description\": \"OK\",\n                        \"schema\": {\n                            \"$ref\": \"#/definitions/StockDTO\"\n                        }\n                    },\n                    \"201\": {\n                        \"description\": \"Created\"\n                    },\n                    \"401\": {\n                        \"description\": \"Unauthorized\"\n                    },\n                    \"403\": {\n                        \"description\": \"Forbidden\"\n                    },\n                    \"404\": {\n                        \"description\": \"Not Found\"\n                    }\n                }\n            }\n        },\n        \"/api/stocks/{id}\": {\n            \"get\": {\n                \"tags\": [\n                    \"stock-controller\"\n                ],\n                \"summary\": \"getStockById\",\n                \"operationId\": \"getStockByIdUsingGET\",\n                \"produces\": [\n                    \"*/*\"\n                ],\n                \"parameters\": [\n                    {\n                        \"name\": \"id\",\n                        \"in\": \"path\",\n                        \"description\": \"id\",\n                        \"required\": true,\n                        \"type\": \"integer\",\n                        \"format\": \"int64\"\n                    }\n                ],\n                \"responses\": {\n                    \"200\": {\n                        \"description\": \"OK\",\n                        \"schema\": {\n                            \"$ref\": \"#/definitions/StockDTO\"\n                        }\n                    },\n                    \"401\": {\n                        \"description\": \"Unauthorized\"\n                    },\n                    \"403\": {\n                        \"description\": \"Forbidden\"\n                    },\n                    \"404\": {\n                        \"description\": \"Not Found\"\n                    }\n                }\n            },\n            \"put\": {\n                \"tags\": [\n                    \"stock-controller\"\n                ],\n                \"summary\": \"updateStock\",\n                \"operationId\": \"updateStockUsingPUT\",\n                \"consumes\": [\n                    \"application/json\"\n                ],\n                \"produces\": [\n                    \"*/*\"\n                ],\n                \"parameters\": [\n                    {\n                        \"name\": \"id\",\n                        \"in\": \"path\",\n                        \"description\": \"id\",\n                        \"required\": true,\n                        \"type\": \"integer\",\n                        \"format\": \"int64\"\n                    },\n                    {\n                        \"in\": \"body\",\n                        \"name\": \"stockDTO\",\n                        \"description\": \"stockDTO\",\n                        \"required\": true,\n                        \"schema\": {\n                            \"$ref\": \"#/definitions/StockDTO\"\n                        }\n                    }\n                ],\n                \"responses\": {\n                    \"200\": {\n                        \"description\": \"OK\",\n                        \"schema\": {\n                            \"$ref\": \"#/definitions/StockDTO\"\n                        }\n                    },\n                    \"201\": {\n                        \"description\": \"Created\"\n                    },\n                    \"401\": {\n                        \"description\": \"Unauthorized\"\n                    },\n                    \"403\": {\n                        \"description\": \"Forbidden\"\n                    },\n                    \"404\": {\n                        \"description\": \"Not Found\"\n                    }\n                }\n            },\n            \"delete\": {\n                \"tags\": [\n                    \"stock-controller\"\n                ],\n                \"summary\": \"deleteStock\",\n                \"operationId\": \"deleteStockUsingDELETE\",\n                \"produces\": [\n                    \"*/*\"\n                ],\n                \"parameters\": [\n                    {\n                        \"name\": \"id\",\n                        \"in\": \"path\",\n                        \"description\": \"id\",\n                        \"required\": true,\n                        \"type\": \"integer\",\n                        \"format\": \"int64\"\n                    }\n                ],\n                \"responses\": {\n                    \"200\": {\n                        \"description\": \"OK\",\n                        \"schema\": {\n                            \"type\": \"string\"\n                        }\n                    },\n                    \"204\": {\n                        \"description\": \"No Content\"\n                    },\n                    \"401\": {\n                        \"description\": \"Unauthorized\"\n                    },\n                    \"403\": {\n                        \"description\": \"Forbidden\"\n                    }\n                }\n            }\n        },\n        \"/api/v1/auth\": {\n            \"post\": {\n                \"tags\": [\n                    \"login-controller\"\n                ],\n                \"summary\": \"LogIn\",\n                \"operationId\": \"LogInUsingPOST\",\n                \"consumes\": [\n                    \"application/json\"\n                ],\n                \"produces\": [\n                    \"*/*\"\n                ],\n                \"parameters\": [\n                    {\n                        \"in\": \"body\",\n                        \"name\": \"authenticationRequest\",\n                        \"description\": \"authenticationRequest\",\n                        \"required\": true,\n                        \"schema\": {\n                            \"$ref\": \"#/definitions/AuthenticationRequest\"\n                        }\n                    }\n                ],\n                \"responses\": {\n                    \"200\": {\n                        \"description\": \"OK\",\n                        \"schema\": {\n                            \"$ref\": \"#/definitions/AuthenticationResponse\"\n                        }\n                    },\n                    \"201\": {\n                        \"description\": \"Created\"\n                    },\n                    \"401\": {\n                        \"description\": \"Unauthorized\"\n                    },\n                    \"403\": {\n                        \"description\": \"Forbidden\"\n                    },\n                    \"404\": {\n                        \"description\": \"Not Found\"\n                    }\n                }\n            }\n        },\n        \"/error\": {\n            \"get\": {\n                \"tags\": [\n                    \"basic-error-controller\"\n                ],\n                \"summary\": \"errorHtml\",\n                \"operationId\": \"errorHtmlUsingGET\",\n                \"produces\": [\n                    \"text/html\"\n                ],\n                \"responses\": {\n                    \"200\": {\n                        \"description\": \"OK\",\n                        \"schema\": {\n                            \"$ref\": \"#/definitions/ModelAndView\"\n                        }\n                    },\n                    \"401\": {\n                        \"description\": \"Unauthorized\"\n                    },\n                    \"403\": {\n                        \"description\": \"Forbidden\"\n                    },\n                    \"404\": {\n                        \"description\": \"Not Found\"\n                    }\n                }\n            },\n            \"head\": {\n                \"tags\": [\n                    \"basic-error-controller\"\n                ],\n                \"summary\": \"errorHtml\",\n                \"operationId\": \"errorHtmlUsingHEAD\",\n                \"consumes\": [\n                    \"application/json\"\n                ],\n                \"produces\": [\n                    \"text/html\"\n                ],\n                \"responses\": {\n                    \"200\": {\n                        \"description\": \"OK\",\n                        \"schema\": {\n                            \"$ref\": \"#/definitions/ModelAndView\"\n                        }\n                    },\n                    \"204\": {\n                        \"description\": \"No Content\"\n                    },\n                    \"401\": {\n                        \"description\": \"Unauthorized\"\n                    },\n                    \"403\": {\n                        \"description\": \"Forbidden\"\n                    }\n                }\n            },\n            \"post\": {\n                \"tags\": [\n                    \"basic-error-controller\"\n                ],\n                \"summary\": \"errorHtml\",\n                \"operationId\": \"errorHtmlUsingPOST\",\n                \"consumes\": [\n                    \"application/json\"\n                ],\n                \"produces\": [\n                    \"text/html\"\n                ],\n                \"responses\": {\n                    \"200\": {\n                        \"description\": \"OK\",\n                        \"schema\": {\n                            \"$ref\": \"#/definitions/ModelAndView\"\n                        }\n                    },\n                    \"201\": {\n                        \"description\": \"Created\"\n                    },\n                    \"401\": {\n                        \"description\": \"Unauthorized\"\n                    },\n                    \"403\": {\n                        \"description\": \"Forbidden\"\n                    },\n                    \"404\": {\n                        \"description\": \"Not Found\"\n                    }\n                }\n            },\n            \"put\": {\n                \"tags\": [\n                    \"basic-error-controller\"\n                ],\n                \"summary\": \"errorHtml\",\n                \"operationId\": \"errorHtmlUsingPUT\",\n                \"consumes\": [\n                    \"application/json\"\n                ],\n                \"produces\": [\n                    \"text/html\"\n                ],\n                \"responses\": {\n                    \"200\": {\n                        \"description\": \"OK\",\n                        \"schema\": {\n                            \"$ref\": \"#/definitions/ModelAndView\"\n                        }\n                    },\n                    \"201\": {\n                        \"description\": \"Created\"\n                    },\n                    \"401\": {\n                        \"description\": \"Unauthorized\"\n                    },\n                    \"403\": {\n                        \"description\": \"Forbidden\"\n                    },\n                    \"404\": {\n                        \"description\": \"Not Found\"\n                    }\n                }\n            },\n            \"delete\": {\n                \"tags\": [\n                    \"basic-error-controller\"\n                ],\n                \"summary\": \"errorHtml\",\n                \"operationId\": \"errorHtmlUsingDELETE\",\n                \"produces\": [\n                    \"text/html\"\n                ],\n                \"responses\": {\n                    \"200\": {\n                        \"description\": \"OK\",\n                        \"schema\": {\n                            \"$ref\": \"#/definitions/ModelAndView\"\n                        }\n                    },\n                    \"204\": {\n                        \"description\": \"No Content\"\n                    },\n                    \"401\": {\n                        \"description\": \"Unauthorized\"\n                    },\n                    \"403\": {\n                        \"description\": \"Forbidden\"\n                    }\n                }\n            },\n            \"options\": {\n                \"tags\": [\n                    \"basic-error-controller\"\n                ],\n                \"summary\": \"errorHtml\",\n                \"operationId\": \"errorHtmlUsingOPTIONS\",\n                \"consumes\": [\n                    \"application/json\"\n                ],\n                \"produces\": [\n                    \"text/html\"\n                ],\n                \"responses\": {\n                    \"200\": {\n                        \"description\": \"OK\",\n                        \"schema\": {\n                            \"$ref\": \"#/definitions/ModelAndView\"\n                        }\n                    },\n                    \"204\": {\n                        \"description\": \"No Content\"\n                    },\n                    \"401\": {\n                        \"description\": \"Unauthorized\"\n                    },\n                    \"403\": {\n                        \"description\": \"Forbidden\"\n                    }\n                }\n            },\n            \"patch\": {\n                \"tags\": [\n                    \"basic-error-controller\"\n                ],\n                \"summary\": \"errorHtml\",\n                \"operationId\": \"errorHtmlUsingPATCH\",\n                \"consumes\": [\n                    \"application/json\"\n                ],\n                \"produces\": [\n                    \"text/html\"\n                ],\n                \"responses\": {\n                    \"200\": {\n                        \"description\": \"OK\",\n                        \"schema\": {\n                            \"$ref\": \"#/definitions/ModelAndView\"\n                        }\n                    },\n                    \"204\": {\n                        \"description\": \"No Content\"\n                    },\n                    \"401\": {\n                        \"description\": \"Unauthorized\"\n                    },\n                    \"403\": {\n                        \"description\": \"Forbidden\"\n                    }\n                }\n            }\n        },\n        \"/swagger-ui.html\": {\n            \"get\": {\n                \"tags\": [\n                    \"swagger-welcome-web-mvc\"\n                ],\n                \"summary\": \"redirectToUi\",\n                \"operationId\": \"redirectToUiUsingGET\",\n                \"produces\": [\n                    \"*/*\"\n                ],\n                \"responses\": {\n                    \"200\": {\n                        \"description\": \"OK\"\n                    },\n                    \"401\": {\n                        \"description\": \"Unauthorized\"\n                    },\n                    \"403\": {\n                        \"description\": \"Forbidden\"\n                    },\n                    \"404\": {\n                        \"description\": \"Not Found\"\n                    }\n                }\n            }\n        },\n        \"/v3/api-docs\": {\n            \"get\": {\n                \"tags\": [\n                    \"open-api-web-mvc-resource\"\n                ],\n                \"summary\": \"openapiJson\",\n                \"operationId\": \"openapiJsonUsingGET\",\n                \"produces\": [\n                    \"application/json\"\n                ],\n                \"parameters\": [\n                    {\n                        \"name\": \"apiDocsUrl\",\n                        \"in\": \"query\",\n                        \"description\": \"apiDocsUrl\",\n                        \"required\": false,\n                        \"type\": \"string\"\n                    },\n                    {\n                        \"name\": \"country\",\n                        \"in\": \"query\",\n                        \"required\": false,\n                        \"type\": \"string\"\n                    },\n                    {\n                        \"name\": \"displayCountry\",\n                        \"in\": \"query\",\n                        \"required\": false,\n                        \"type\": \"string\"\n                    },\n                    {\n                        \"name\": \"displayLanguage\",\n                        \"in\": \"query\",\n                        \"required\": false,\n                        \"type\": \"string\"\n                    },\n                    {\n                        \"name\": \"displayName\",\n                        \"in\": \"query\",\n                        \"required\": false,\n                        \"type\": \"string\"\n                    },\n                    {\n                        \"name\": \"displayScript\",\n                        \"in\": \"query\",\n                        \"required\": false,\n                        \"type\": \"string\"\n                    },\n                    {\n                        \"name\": \"displayVariant\",\n                        \"in\": \"query\",\n                        \"required\": false,\n                        \"type\": \"string\"\n                    },\n                    {\n                        \"name\": \"extensionKeys\",\n                        \"in\": \"query\",\n                        \"required\": false,\n                        \"type\": \"array\",\n                        \"items\": {\n                            \"type\": \"string\"\n                        },\n                        \"collectionFormat\": \"multi\"\n                    },\n                    {\n                        \"name\": \"ISO3Country\",\n                        \"in\": \"query\",\n                        \"required\": false,\n                        \"type\": \"string\"\n                    },\n                    {\n                        \"name\": \"ISO3Language\",\n                        \"in\": \"query\",\n                        \"required\": false,\n                        \"type\": \"string\"\n                    },\n                    {\n                        \"name\": \"language\",\n                        \"in\": \"query\",\n                        \"required\": false,\n                        \"type\": \"string\"\n                    },\n                    {\n                        \"name\": \"script\",\n                        \"in\": \"query\",\n                        \"required\": false,\n                        \"type\": \"string\"\n                    },\n                    {\n                        \"name\": \"unicodeLocaleAttributes\",\n                        \"in\": \"query\",\n                        \"required\": false,\n                        \"type\": \"array\",\n                        \"items\": {\n                            \"type\": \"string\"\n                        },\n                        \"collectionFormat\": \"multi\"\n                    },\n                    {\n                        \"name\": \"unicodeLocaleKeys\",\n                        \"in\": \"query\",\n                        \"required\": false,\n                        \"type\": \"array\",\n                        \"items\": {\n                            \"type\": \"string\"\n                        },\n                        \"collectionFormat\": \"multi\"\n                    },\n                    {\n                        \"name\": \"variant\",\n                        \"in\": \"query\",\n                        \"required\": false,\n                        \"type\": \"string\"\n                    }\n                ],\n                \"responses\": {\n                    \"200\": {\n                        \"description\": \"OK\",\n                        \"schema\": {\n                            \"type\": \"string\"\n                        }\n                    },\n                    \"401\": {\n                        \"description\": \"Unauthorized\"\n                    },\n                    \"403\": {\n                        \"description\": \"Forbidden\"\n                    },\n                    \"404\": {\n                        \"description\": \"Not Found\"\n                    }\n                }\n            }\n        },\n        \"/v3/api-docs.yaml\": {\n            \"get\": {\n                \"tags\": [\n                    \"open-api-web-mvc-resource\"\n                ],\n                \"summary\": \"openapiYaml\",\n                \"operationId\": \"openapiYamlUsingGET\",\n                \"produces\": [\n                    \"application/vnd.oai.openapi\"\n                ],\n                \"parameters\": [\n                    {\n                        \"name\": \"apiDocsUrl\",\n                        \"in\": \"query\",\n                        \"description\": \"apiDocsUrl\",\n                        \"required\": false,\n                        \"type\": \"string\"\n                    },\n                    {\n                        \"name\": \"country\",\n                        \"in\": \"query\",\n                        \"required\": false,\n                        \"type\": \"string\"\n                    },\n                    {\n                        \"name\": \"displayCountry\",\n                        \"in\": \"query\",\n                        \"required\": false,\n                        \"type\": \"string\"\n                    },\n                    {\n                        \"name\": \"displayLanguage\",\n                        \"in\": \"query\",\n                        \"required\": false,\n                        \"type\": \"string\"\n                    },\n                    {\n                        \"name\": \"displayName\",\n                        \"in\": \"query\",\n                        \"required\": false,\n                        \"type\": \"string\"\n                    },\n                    {\n                        \"name\": \"displayScript\",\n                        \"in\": \"query\",\n                        \"required\": false,\n                        \"type\": \"string\"\n                    },\n                    {\n                        \"name\": \"displayVariant\",\n                        \"in\": \"query\",\n                        \"required\": false,\n                        \"type\": \"string\"\n                    },\n                    {\n                        \"name\": \"extensionKeys\",\n                        \"in\": \"query\",\n                        \"required\": false,\n                        \"type\": \"array\",\n                        \"items\": {\n                            \"type\": \"string\"\n                        },\n                        \"collectionFormat\": \"multi\"\n                    },\n                    {\n                        \"name\": \"ISO3Country\",\n                        \"in\": \"query\",\n                        \"required\": false,\n                        \"type\": \"string\"\n                    },\n                    {\n                        \"name\": \"ISO3Language\",\n                        \"in\": \"query\",\n                        \"required\": false,\n                        \"type\": \"string\"\n                    },\n                    {\n                        \"name\": \"language\",\n                        \"in\": \"query\",\n                        \"required\": false,\n                        \"type\": \"string\"\n                    },\n                    {\n                        \"name\": \"script\",\n                        \"in\": \"query\",\n                        \"required\": false,\n                        \"type\": \"string\"\n                    },\n                    {\n                        \"name\": \"unicodeLocaleAttributes\",\n                        \"in\": \"query\",\n                        \"required\": false,\n                        \"type\": \"array\",\n                        \"items\": {\n                            \"type\": \"string\"\n                        },\n                        \"collectionFormat\": \"multi\"\n                    },\n                    {\n                        \"name\": \"unicodeLocaleKeys\",\n                        \"in\": \"query\",\n                        \"required\": false,\n                        \"type\": \"array\",\n                        \"items\": {\n                            \"type\": \"string\"\n                        },\n                        \"collectionFormat\": \"multi\"\n                    },\n                    {\n                        \"name\": \"variant\",\n                        \"in\": \"query\",\n                        \"required\": false,\n                        \"type\": \"string\"\n                    }\n                ],\n                \"responses\": {\n                    \"200\": {\n                        \"description\": \"OK\",\n                        \"schema\": {\n                            \"type\": \"string\"\n                        }\n                    },\n                    \"401\": {\n                        \"description\": \"Unauthorized\"\n                    },\n                    \"403\": {\n                        \"description\": \"Forbidden\"\n                    },\n                    \"404\": {\n                        \"description\": \"Not Found\"\n                    }\n                }\n            }\n        },\n        \"/v3/api-docs/swagger-config\": {\n            \"get\": {\n                \"tags\": [\n                    \"swagger-config-resource\"\n                ],\n                \"summary\": \"openapiJson\",\n                \"operationId\": \"openapiJsonUsingGET_1\",\n                \"produces\": [\n                    \"application/json\"\n                ],\n                \"responses\": {\n                    \"200\": {\n                        \"description\": \"OK\",\n                        \"schema\": {\n                            \"type\": \"object\"\n                        }\n                    },\n                    \"401\": {\n                        \"description\": \"Unauthorized\"\n                    },\n                    \"403\": {\n                        \"description\": \"Forbidden\"\n                    },\n                    \"404\": {\n                        \"description\": \"Not Found\"\n                    }\n                }\n            }\n        }\n    },\n    \"definitions\": {\n        \"AuthenticationRequest\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"email\": {\n                    \"type\": \"string\"\n                },\n                \"password\": {\n                    \"type\": \"string\"\n                }\n            },\n            \"title\": \"AuthenticationRequest\"\n        },\n        \"AuthenticationResponse\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"authorities\": {\n                    \"type\": \"array\",\n                    \"items\": {\n                        \"type\": \"object\"\n                    }\n                },\n                \"email\": {\n                    \"type\": \"string\"\n                },\n                \"expirationTime\": {\n                    \"type\": \"string\",\n                    \"format\": \"date-time\"\n                },\n                \"jwt\": {\n                    \"type\": \"string\"\n                }\n            },\n            \"title\": \"AuthenticationResponse\"\n        },\n        \"Customer\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"accountNonExpired\": {\n                    \"type\": \"boolean\"\n                },\n                \"accountNonLocked\": {\n                    \"type\": \"boolean\"\n                },\n                \"authorities\": {\n                    \"type\": \"array\",\n                    \"items\": {\n                        \"$ref\": \"#/definitions/GrantedAuthority\"\n                    }\n                },\n                \"bornAt\": {\n                    \"type\": \"string\",\n                    \"format\": \"date-time\"\n                },\n                \"credentialsNonExpired\": {\n                    \"type\": \"boolean\"\n                },\n                \"customer_id\": {\n                    \"type\": \"integer\",\n                    \"format\": \"int64\"\n                },\n                \"email\": {\n                    \"type\": \"string\"\n                },\n                \"enabled\": {\n                    \"type\": \"boolean\"\n                },\n                \"first_name\": {\n                    \"type\": \"string\"\n                },\n                \"last_name\": {\n                    \"type\": \"string\"\n                },\n                \"locked\": {\n                    \"type\": \"boolean\"\n                },\n                \"password\": {\n                    \"type\": \"string\"\n                },\n                \"username\": {\n                    \"type\": \"string\"\n                }\n            },\n            \"title\": \"Customer\"\n        },\n        \"CustomerDTO\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"bornAt\": {\n                    \"type\": \"string\",\n                    \"format\": \"date-time\"\n                },\n                \"customer_id\": {\n                    \"type\": \"integer\",\n                    \"format\": \"int64\"\n                },\n                \"email\": {\n                    \"type\": \"string\"\n                },\n                \"first_name\": {\n                    \"type\": \"string\"\n                },\n                \"last_name\": {\n                    \"type\": \"string\"\n                },\n                \"password\": {\n                    \"type\": \"string\"\n                }\n            },\n            \"title\": \"CustomerDTO\"\n        },\n        \"GrantedAuthority\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"authority\": {\n                    \"type\": \"string\"\n                }\n            },\n            \"title\": \"GrantedAuthority\"\n        },\n        \"ModelAndView\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"empty\": {\n                    \"type\": \"boolean\"\n                },\n                \"model\": {\n                    \"type\": \"object\"\n                },\n                \"modelMap\": {\n                    \"type\": \"object\",\n                    \"additionalProperties\": {\n                        \"type\": \"object\"\n                    }\n                },\n                \"reference\": {\n                    \"type\": \"boolean\"\n                },\n                \"status\": {\n                    \"type\": \"string\",\n                    \"enum\": [\n                        \"ACCEPTED\",\n                        \"ALREADY_REPORTED\",\n                        \"BAD_GATEWAY\",\n                        \"BAD_REQUEST\",\n                        \"BANDWIDTH_LIMIT_EXCEEDED\",\n                        \"CHECKPOINT\",\n                        \"CONFLICT\",\n                        \"CONTINUE\",\n                        \"CREATED\",\n                        \"DESTINATION_LOCKED\",\n                        \"EXPECTATION_FAILED\",\n                        \"FAILED_DEPENDENCY\",\n                        \"FORBIDDEN\",\n                        \"FOUND\",\n                        \"GATEWAY_TIMEOUT\",\n                        \"GONE\",\n                        \"HTTP_VERSION_NOT_SUPPORTED\",\n                        \"IM_USED\",\n                        \"INSUFFICIENT_SPACE_ON_RESOURCE\",\n                        \"INSUFFICIENT_STORAGE\",\n                        \"INTERNAL_SERVER_ERROR\",\n                        \"I_AM_A_TEAPOT\",\n                        \"LENGTH_REQUIRED\",\n                        \"LOCKED\",\n                        \"LOOP_DETECTED\",\n                        \"METHOD_FAILURE\",\n                        \"METHOD_NOT_ALLOWED\",\n                        \"MOVED_PERMANENTLY\",\n                        \"MOVED_TEMPORARILY\",\n                        \"MULTIPLE_CHOICES\",\n                        \"MULTI_STATUS\",\n                        \"NETWORK_AUTHENTICATION_REQUIRED\",\n                        \"NON_AUTHORITATIVE_INFORMATION\",\n                        \"NOT_ACCEPTABLE\",\n                        \"NOT_EXTENDED\",\n                        \"NOT_FOUND\",\n                        \"NOT_IMPLEMENTED\",\n                        \"NOT_MODIFIED\",\n                        \"NO_CONTENT\",\n                        \"OK\",\n                        \"PARTIAL_CONTENT\",\n                        \"PAYLOAD_TOO_LARGE\",\n                        \"PAYMENT_REQUIRED\",\n                        \"PERMANENT_REDIRECT\",\n                        \"PRECONDITION_FAILED\",\n                        \"PRECONDITION_REQUIRED\",\n                        \"PROCESSING\",\n                        \"PROXY_AUTHENTICATION_REQUIRED\",\n                        \"REQUESTED_RANGE_NOT_SATISFIABLE\",\n                        \"REQUEST_ENTITY_TOO_LARGE\",\n                        \"REQUEST_HEADER_FIELDS_TOO_LARGE\",\n                        \"REQUEST_TIMEOUT\",\n                        \"REQUEST_URI_TOO_LONG\",\n                        \"RESET_CONTENT\",\n                        \"SEE_OTHER\",\n                        \"SERVICE_UNAVAILABLE\",\n                        \"SWITCHING_PROTOCOLS\",\n                        \"TEMPORARY_REDIRECT\",\n                        \"TOO_EARLY\",\n                        \"TOO_MANY_REQUESTS\",\n                        \"UNAUTHORIZED\",\n                        \"UNAVAILABLE_FOR_LEGAL_REASONS\",\n                        \"UNPROCESSABLE_ENTITY\",\n                        \"UNSUPPORTED_MEDIA_TYPE\",\n                        \"UPGRADE_REQUIRED\",\n                        \"URI_TOO_LONG\",\n                        \"USE_PROXY\",\n                        \"VARIANT_ALSO_NEGOTIATES\"\n                    ]\n                },\n                \"view\": {\n                    \"$ref\": \"#/definitions/View\"\n                },\n                \"viewName\": {\n                    \"type\": \"string\"\n                }\n            },\n            \"title\": \"ModelAndView\"\n        },\n        \"Order\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"customer\": {\n                    \"$ref\": \"#/definitions/Customer\"\n                },\n                \"orderAt\": {\n                    \"type\": \"string\",\n                    \"format\": \"date-time\"\n                },\n                \"order_id\": {\n                    \"type\": \"integer\",\n                    \"format\": \"int64\"\n                }\n            },\n            \"title\": \"Order\"\n        },\n        \"OrderDTO\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"customer_id\": {\n                    \"type\": \"integer\",\n                    \"format\": \"int64\"\n                },\n                \"orderAt\": {\n                    \"type\": \"string\",\n                    \"format\": \"date-time\"\n                },\n                \"order_id\": {\n                    \"type\": \"integer\",\n                    \"format\": \"int64\"\n                }\n            },\n            \"title\": \"OrderDTO\"\n        },\n        \"Product\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"name\": {\n                    \"type\": \"string\"\n                },\n                \"price\": {\n                    \"type\": \"number\",\n                    \"format\": \"double\"\n                },\n                \"product_id\": {\n                    \"type\": \"integer\",\n                    \"format\": \"int64\"\n                },\n                \"reference\": {\n                    \"type\": \"string\"\n                },\n                \"slug\": {\n                    \"type\": \"string\"\n                },\n                \"vat\": {\n                    \"type\": \"integer\",\n                    \"format\": \"int32\"\n                }\n            },\n            \"title\": \"Product\"\n        },\n        \"ProductDTO\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"name\": {\n                    \"type\": \"string\"\n                },\n                \"price\": {\n                    \"type\": \"number\",\n                    \"format\": \"double\"\n                },\n                \"product_id\": {\n                    \"type\": \"integer\",\n                    \"format\": \"int64\"\n                },\n                \"reference\": {\n                    \"type\": \"string\"\n                },\n                \"slug\": {\n                    \"type\": \"string\"\n                },\n                \"vat\": {\n                    \"type\": \"integer\",\n                    \"format\": \"int32\"\n                }\n            },\n            \"title\": \"ProductDTO\"\n        },\n        \"ProductOrder\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"id\": {\n                    \"$ref\": \"#/definitions/ProductOrderId\"\n                },\n                \"price\": {\n                    \"type\": \"number\",\n                    \"format\": \"double\"\n                },\n                \"quantity\": {\n                    \"type\": \"integer\",\n                    \"format\": \"int32\"\n                },\n                \"vat\": {\n                    \"type\": \"integer\",\n                    \"format\": \"int32\"\n                }\n            },\n            \"title\": \"ProductOrder\"\n        },\n        \"ProductOrderId\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"order_id\": {\n                    \"type\": \"integer\",\n                    \"format\": \"int64\"\n                },\n                \"product_id\": {\n                    \"type\": \"integer\",\n                    \"format\": \"int64\"\n                }\n            },\n            \"title\": \"ProductOrderId\"\n        },\n        \"Stock\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"product_id\": {\n                    \"$ref\": \"#/definitions/Product\"\n                },\n                \"quantity\": {\n                    \"type\": \"integer\",\n                    \"format\": \"int32\"\n                },\n                \"stock_id\": {\n                    \"type\": \"integer\",\n                    \"format\": \"int64\"\n                },\n                \"updateAt\": {\n                    \"type\": \"string\",\n                    \"format\": \"date-time\"\n                }\n            },\n            \"title\": \"Stock\"\n        },\n        \"StockDTO\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"product_id\": {\n                    \"type\": \"integer\",\n                    \"format\": \"int64\"\n                },\n                \"quantity\": {\n                    \"type\": \"integer\",\n                    \"format\": \"int32\"\n                },\n                \"stock_id\": {\n                    \"type\": \"integer\",\n                    \"format\": \"int64\"\n                },\n                \"updateAt\": {\n                    \"type\": \"string\",\n                    \"format\": \"date-time\"\n                }\n            },\n            \"title\": \"StockDTO\"\n        },\n        \"View\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"contentType\": {\n                    \"type\": \"string\"\n                }\n            },\n            \"title\": \"View\"\n        },\n        \"productOrderDTO\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"order_id\": {\n                    \"type\": \"integer\",\n                    \"format\": \"int64\"\n                },\n                \"price\": {\n                    \"type\": \"number\",\n                    \"format\": \"double\"\n                },\n                \"product_id\": {\n                    \"type\": \"integer\",\n                    \"format\": \"int64\"\n                },\n                \"quantity\": {\n                    \"type\": \"integer\",\n                    \"format\": \"int32\"\n                },\n                \"vat\": {\n                    \"type\": \"integer\",\n                    \"format\": \"int32\"\n                }\n            },\n            \"title\": \"productOrderDTO\"\n        }\n    }\n}"
+				}
+			]
+		}
+	]
+}
